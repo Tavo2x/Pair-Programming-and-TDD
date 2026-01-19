@@ -20,8 +20,6 @@ TEST_CASE("Test Case 1")
 		Point p1(1.2,3.4);
 		REQUIRE(p1.getXloc() == 1.2);
 		REQUIRE(p1.getYloc() == 3.4);
-
-
-		// REQUIRE(p1.stringWrap = "X:1.2, Y:3.4");
+		REQUIRE(p1.stringWrap() == "X:1.2, Y:3.4");
 	}
 }
