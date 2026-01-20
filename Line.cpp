@@ -30,17 +30,22 @@ Point Line :: midPoint(){
    Point midpoint(xMid,yMid);
    return midpoint;
 }
-Line Line :: extendedLine(Point p1, Point p2)
+Line Line :: extendedLine(double dis)
 {
-    // double eX;
-    // double eY;
-    // double extLength = length();
-    // eX = p2.getXloc() - p1.getXloc();
-    // eY = p2.getYloc() - p1.getYloc();
-    // ex / extLength;
-
-    // Line extendedLine (eX,eY);
-
+    double eX;
+    double eY;
+    eX = ending.getXloc() - starting.getXloc();
+    eY = ending.getYloc() - starting.getYloc();
+    double unitVec;
+    unitVec = (eX/length(), eY/length());
+    double newStartx = (starting.getXloc() - dis) * unitVec;
+    double newStarty = (starting.getYloc() - dis )* unitVec;
+    double newEndx = (ending.getXloc() - dis) * unitVec;
+    double newEndy = (ending.getYloc() - dis )* unitVec;
+    Point newStartPoint(newStartx,newStarty);
+    Point newEndPoint(newEndx,newEndy);
+    Line extendedLine (newStartPoint,newEndPoint);
+    return extendedLine;
 }
 // double Line :: getYintercept()
 // {

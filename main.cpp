@@ -27,7 +27,6 @@ TEST_CASE("Test Case 1")
 		Line L1 (p1,p2);
 		Point p3(0,100);
 		Point p4(3.4,5.6);
-
 		REQUIRE(fabs(L1.length() - 6.2225396744) < .001);
 		REQUIRE(fabs(L1.Slope() - 1.0) < .001);
 		//REQUIRE(L1.getYintercept(p1,p2) == 2.2);
@@ -36,6 +35,9 @@ TEST_CASE("Test Case 1")
 		Point midP = L1.midPoint();
 		REQUIRE(midP.getXloc() == 3.4);
 		REQUIRE(midP.getYloc() == 5.6);
-
+		// Line exLine = L1.extendedLine(2);
+		// Point startPoint();
+		// Point endPoint();
+		// REQUIRE();
 	}
 }

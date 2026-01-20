@@ -9,6 +9,6 @@ public:
     double Slope();
     bool onLine(Point p1);
     Point midPoint();
-    Line extendedLine (Point p1,Point p2);
+    Line extendedLine (double dis);
     // double getYintercept();
 };
