@@ -28,12 +28,13 @@ TEST_CASE("Test Case 1")
 		Point p1(1.2,3.4);
 		Point p2(5.6,7.8);
 		Line L1 (p1,p2);
+		Point p3(0,100);
 
-		REQUIRE(L1.length(p1,p2) == 6.2);
-		// REQUIRE(L1.getSlope() == 1);
-		// REQUIRE(L1.onLine(0,100) == false);
-		// REQUIRE(L1.onLine(p1) == true);
-
-
+		REQUIRE(fabs(L1.length() - 6.2225396744) < .001);
+		REQUIRE(fabs(L1.Slope() - 1.0) < .001);
+		//REQUIRE(L1.getYintercept(p1,p2) == 2.2);
+		REQUIRE(L1.onLine(p1) == true);
+		REQUIRE(L1.onLine(p3) == false);
+	
 	}
 }

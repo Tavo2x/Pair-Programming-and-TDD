@@ -1,10 +1,13 @@
 #include "Point.h"
 class Line{
 private:
-    double pointOne;
-    double pointTwo;
+    Point starting;
+    Point ending;
 public:
     Line(Point p1, Point p2);
-    double length(Point p1 , Point p2);
-    double Slope(Point p1, Point p2);
+    double length();
+    double Slope();
+    bool onLine(Point p1);
+    Point midPoint();
+    // double getYintercept();
 };
